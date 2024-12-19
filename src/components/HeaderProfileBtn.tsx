@@ -23,4 +23,4 @@ function HeaderProfileBtn() {
     </>
   );
 }
-export default HeaderProfileBtn
+export default HeaderProfileBtn;

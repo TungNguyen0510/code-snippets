@@ -2,7 +2,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import ProPlanView from "./_components/ProPlanView";
-import NavigationHeader from "@/components/NavigationHeader";
+import NavigationHeader from "@/components/Header";
 import { ENTERPRISE_FEATURES, FEATURES } from "./_constants";
 import { Star } from "lucide-react";
 import FeatureCategory from "./_components/FeatureCategory";

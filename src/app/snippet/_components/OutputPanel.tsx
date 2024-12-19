@@ -10,8 +10,14 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import RunningCodeSkeleton from "./RunningCodeSkeleton";
+import { useClerk } from "@clerk/nextjs";
+import useMounted from "@/hooks/useMounted";
+import OutputPanelSkeleton from "./OutputPanelSkeleton";
 
 function OutputPanel() {
+  const mounted = useMounted();
+  const clerk = useClerk();
+
   const { output, error, isRunning } = useCodeEditorStore();
   const [isCopied, setIsCopied] = useState(false);
 
@@ -24,6 +30,10 @@ function OutputPanel() {
 
     setTimeout(() => setIsCopied(false), 2000);
   };
+
+  if (!mounted) return null;
+
+  if (!clerk.loaded) return <OutputPanelSkeleton />;
 
   return (
     <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50">
