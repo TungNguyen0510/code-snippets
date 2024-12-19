@@ -59,12 +59,12 @@ function EditorPanel({ convexUser }: { convexUser: any }) {
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] p-2">
         {/* Header */}
         <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <LanguageSelector hasAccess={Boolean(convexUser?.isPro)} />
             <ThemeSelector />
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {/* Font Size Slider */}
             <div className="flex items-center gap-3 px-3 py-2 bg-[#1e1e2e] rounded-lg ring-1 ring-white/5">
               <TypeIcon className="size-4 text-gray-400" />
@@ -113,7 +113,7 @@ function EditorPanel({ convexUser }: { convexUser: any }) {
         <div className="relative group rounded-xl overflow-hidden ring-1 ring-white/[0.05]">
           {clerk.loaded && (
             <Editor
-              height="600px"
+              className="h-[400px] lg:h-[600px]"
               language={LANGUAGE_CONFIG[language].monacoLanguage}
               onChange={handleEditorChange}
               theme={theme}

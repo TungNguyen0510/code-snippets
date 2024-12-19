@@ -133,7 +133,7 @@ function ProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="p-6"
+              className="p-3 md:p-6"
             >
               {/* ACTIVE TAB IS EXECUTIONS: */}
               {activeTab === "executions" && (
@@ -256,7 +256,7 @@ function ProfilePage() {
                           transition-all duration-300 overflow-hidden h-full group-hover:transform
                         group-hover:scale-[1.02]"
                         >
-                          <div className="p-6">
+                          <div className="p-3 md:p-6">
                             <div className="flex items-center justify-between mb-4">
                               <div className="flex items-center gap-3">
                                 <div className="relative">

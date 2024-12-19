@@ -4,6 +4,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { currentUser } from "@clerk/nextjs/server";
 import { api } from "../../../convex/_generated/api";
 import Header from "@/components/Header";
+import ResizableSplitView from "@/components/ResizableSplitView";
 
 export default async function SnippetPage() {
   const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
@@ -14,13 +15,13 @@ export default async function SnippetPage() {
   });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[calc(100vh-64px)]">
       <Header />
       <div className="max-w-[1800px] mx-auto p-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <EditorPanel convexUser={convexUser} />
-          <OutputPanel />
-        </div>
+        <ResizableSplitView
+          leftComponent={<EditorPanel convexUser={convexUser} />}
+          rightComponent={<OutputPanel />}
+        />
       </div>
     </div>
   );

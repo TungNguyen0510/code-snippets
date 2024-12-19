@@ -12,8 +12,8 @@ function Header() {
     <div className="sticky top-0 z-50 w-full border-b border-gray-800/50 bg-gray-950/80 backdrop-blur-xl backdrop-saturate-150">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5" />
       <div className="max-w-7xl mx-auto px-4">
-        <div className="relative h-16 flex items-center justify-between">
-          <div className="flex items-center gap-8">
+        <div className="relative h-16 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 md:gap-4 lg:gap-8">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group relative">
               {/* logo hover effect */}
@@ -29,12 +29,12 @@ function Header() {
 
               <div className="relative">
                 <span
-                  className="block text-lg font-semibold bg-gradient-to-r
+                  className="block text-sm lg:text-lg font-semibold bg-gradient-to-r
                  from-blue-400 via-blue-300 to-purple-400 text-transparent bg-clip-text"
                 >
                   Code Snippets
                 </span>
-                <span className="block text-xs text-blue-400/60 font-medium">
+                <span className="block text-[10px] leading-[10px] md:text-xs text-blue-400/60 font-medium">
                   Interactive Code Editor
                 </span>
               </div>
@@ -52,7 +52,7 @@ function Header() {
               to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
                 />
                 <Code2 className="w-4 h-4 relative z-10 group-hover:rotate-3 transition-transform" />
-                <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors">
+                <span className="text-nowrap text-xs lg:text-sm font-medium relative z-10 group-hover:text-white transition-colors">
                   Create Snippet
                 </span>
               </Link>
