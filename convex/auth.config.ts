@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: "https://calm-jaybird-91.clerk.accounts.dev/",
+      domain: process.env.NEXT_PUBLIC_CLERK_URL!,
       applicationID: "convex",
     },
   ],
