@@ -250,7 +250,7 @@ function ProfilePage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {starredSnippets?.map((snippet) => (
                     <div key={snippet._id} className="group relative">
-                      <Link href={`/snippets/${snippet._id}`}>
+                      <Link href={`/snippet/${snippet._id}`}>
                         <div
                           className="bg-black/20 rounded-xl border border-gray-800/50 hover:border-gray-700/50 
                           transition-all duration-300 overflow-hidden h-full group-hover:transform
