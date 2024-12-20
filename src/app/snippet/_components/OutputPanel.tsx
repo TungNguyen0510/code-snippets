@@ -36,7 +36,7 @@ function OutputPanel() {
   if (!clerk.loaded) return <OutputPanelSkeleton />;
 
   return (
-    <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50 h-full">
+    <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50 h-full min-h-[calc(100vh-284px)]">
       {/* Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
@@ -71,7 +71,7 @@ function OutputPanel() {
       <div className="relative">
         <div
           className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] 
-        rounded-xl p-4 h-[400px] lg:h-[646px] mt-6 overflow-auto font-mono text-sm"
+        rounded-xl p-4 h-full min-h-[calc(100vh-240px)] mt-6 overflow-auto font-mono text-sm"
         >
           {isRunning ? (
             <RunningCodeSkeleton />

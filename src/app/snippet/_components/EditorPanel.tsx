@@ -113,7 +113,7 @@ function EditorPanel({ convexUser }: { convexUser: any }) {
         <div className="relative group rounded-xl overflow-hidden ring-1 ring-white/[0.05]">
           {clerk.loaded && (
             <Editor
-              className="h-[400px] lg:h-[600px]"
+              className="h-full min-h-[calc(100vh-284px)]"
               language={LANGUAGE_CONFIG[language].monacoLanguage}
               onChange={handleEditorChange}
               theme={theme}
