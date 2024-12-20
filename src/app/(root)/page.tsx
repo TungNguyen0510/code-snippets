@@ -28,7 +28,7 @@ function HomePage() {
   }
 
   const languages = [...new Set(snippets.map((s) => s.language))];
-  const popularLanguages = languages.slice(0, 5);
+  const popularLanguages = languages;
 
   const filteredSnippets = snippets.filter((snippet) => {
     const matchesSearch =
